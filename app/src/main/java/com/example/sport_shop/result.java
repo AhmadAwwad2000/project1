@@ -3,6 +3,7 @@ package com.example.sport_shop;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.TextView;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -30,20 +31,29 @@ private TextView res;
     }
 
     private void getresult() {
-
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String str = prefs.getString("items", "");
-        Finish_end ff = gson.fromJson(str, Finish_end.class);
+        final Handler handler = new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
 
-         double price1=0;
+                String str = prefs.getString("items", "");
+                Finish_end ff = gson.fromJson(str, Finish_end.class);
 
-        for(int i=0;i<ff.getFinal_data().size();i++){
+                double price1=0;
 
-        price1+=Double.parseDouble(ff.getFinal_data().get(i).getPrice());
-        }
-        String r=Double. toString(price1);
-        res.setText("the total price is : "+r);
+                for(int i=0;i<ff.getFinal_data().size();i++){
+
+                    price1+=Double.parseDouble(ff.getFinal_data().get(i).getPrice());
+                }
+                String r=Double. toString(price1);
+                res.setText("the total price is : "+r);
+
+            }
+        });
+
+
 
     }
 
