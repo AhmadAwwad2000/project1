@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="spinner">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">18pt</item>
+    </style>
+    <style name="textview">
+        <item name="android:textSize">10pt</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+    <style name="btn">
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="image">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+    <style name="head_table">
+        <item name="android:textSize">13pt</item>
+    </style>
+</resources>

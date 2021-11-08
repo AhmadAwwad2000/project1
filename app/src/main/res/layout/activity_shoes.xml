@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#03A9F4"
+    tools:context=".clothes">
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".clothes">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <TextView
+                    style="@style/head_table"
+                    android:layout_marginLeft="8dp"
+                    android:text="image" />
+
+                <TextView
+                    style="@style/head_table"
+                    android:text="price" />
+
+                <TextView
+                    style="@style/head_table"
+                    android:text="size" />
+            </TableRow>
+
+            <TableRow>
+
+
+                <ImageView
+                    style="@style/image"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:drawingCacheQuality="high"
+                    android:src="@drawable/img_6" />
+
+                <TextView
+                    android:id="@+id/item1_price"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/item1_size"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+                <Button
+                    android:layout_height="wrap_content"
+                    android:onClick="click_item1"
+                    android:text="@string/reserve" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    style="@style/image"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:drawingCacheQuality="high"
+                    android:src="@drawable/img_7" />
+
+                <TextView
+                    android:id="@+id/item2_price"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/item2_size"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+                <Button
+                    android:onClick="click_item2"
+                    android:text="@string/reserve" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    style="@style/image"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:drawingCacheQuality="high"
+                    android:src="@drawable/img_8" />
+
+                <TextView
+                    android:id="@+id/item3_price"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/item3_size"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+                <Button
+                    android:layout_height="wrap_content"
+                    android:onClick="click_item3"
+                    android:text="@string/reserve" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    style="@style/image"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:drawingCacheQuality="high"
+                    android:src="@drawable/img_9" />
+
+                <TextView
+                    android:id="@+id/item4_price"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/item4_size"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+                <Button
+                    android:layout_height="wrap_content"
+                    android:onClick="click_item4"
+                    android:text="@string/reserve" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <Button
+            style="@style/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="show_booked"
+            android:text="show" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

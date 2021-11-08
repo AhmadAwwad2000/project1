@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sport_shop</string>
+    <string name="welcome_to_our_sport_shop_app">Welcome to our sport shop app !</string>
+    <string name="make_your_choice">Make your choice</string>
+    <string name="reserve">Book</string>
+    <string name="confirm_and_go_to_the_home_page">Confirm and go to the home page</string>
+</resources>
