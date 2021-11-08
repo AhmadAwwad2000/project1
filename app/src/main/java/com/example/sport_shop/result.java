@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,13 +22,32 @@ import model.java.Finish_end;
 
 public class result extends AppCompatActivity {
 private TextView res;
+private ListView listview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        listview=findViewById(R.id.listview);
         res=findViewById(R.id.res);
         Intent intent =getIntent();
         getresult();
+        fill_list();
+
+    }
+
+    private void fill_list() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Gson gson = new Gson();
+        String str = prefs.getString("items", "");
+        Finish_end ff = gson.fromJson(str, Finish_end.class);
+        String []list=new String[ff.getFinal_data().size()];
+        for (int i=0;i<list.length;i++)
+            list[i]="the price is :"+ff.getFinal_data().get(i).getPrice()+" and the size is  "+ff.getFinal_data().get(i).getSize();
+
+        //ArrayAdapter<String> adapter= new ArrayAdapter<>(this , R.layout.activity_result,list);
+        ArrayAdapter<String> adapter= new ArrayAdapter<>(this , android.R.layout.simple_list_item_1,list);
+        listview.setAdapter(adapter);
+
 
     }
 
